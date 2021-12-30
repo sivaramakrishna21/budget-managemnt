@@ -1,0 +1,20 @@
+<div style="margin:5px 0px">
+  <ul class="list-group" *ngFor="let data of expensedata">
+    <li class="list-group-item" *ngIf="data.Type=='spent'" >
+
+      <i style="color:red" class="fa fa-rupee"></i>
+      {{data.Amount}} &nbsp;{{data.Category}}
+
+      <span class="hover-cursor text-danger pull-right" style="cursor: pointer;" (click)="onDelete(data.key)">
+      <i style="color:red" class="fa fa-trash-o fa-lg"></i></span>
+    </li>
+    <li class="list-group-item" *ngIf="data.Type=='addIncome'" >
+
+      <i style="color:green" class="fa fa-rupee"></i>
+      {{data.Amount}} &nbsp;{{data.Category}}
+
+      <span class="hover-cursor text-danger pull-right" style="cursor: pointer;" (click)="onDelete(data.key)">
+      <i style="color:red" class="fa fa-trash-o fa-lg"></i></span>
+    </li>
+  </ul>
+</div>

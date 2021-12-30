@@ -1,0 +1,41 @@
+<div align="center">
+
+<h5 style="color:blue">  <i class="material-icons" style="color:blue;font-size:26px">date_range</i>
+{{test}}
+</h5>
+</div>
+<br>
+<div class="" >
+  <h3 [(ngModel)]="balance" name="second" ngDefaultControl>Total balance:&nbsp;<i style="color:green" class="fa fa-rupee"></i>{{balance}}</h3>
+<br>
+  <h3 [(ngModel)]="spent" name="first" ngDefaultControl>Total spent:&nbsp;<i style="color:red" class="fa fa-rupee"></i>{{spent}}</h3>
+
+</div>
+<br>
+<br>
+<div class="" align="center">
+  <a [routerLink]="['/addIncome']" ><svg width="150" height="150" >
+    <circle cx="60" cy="60" r="50" stroke="green" stroke-width="4" fill="white" name="one" />
+      Sorry, your browser does not support inline SVG.
+    <text fill="#000000" font-size="18" font-family="Verdana"
+      x="30" y="60">Income</text>
+  </svg></a>
+  <a [routerLink]="['/spent']"><svg width="150" height="150" >
+    <circle cx="60" cy="60" r="50" stroke="red" stroke-width="4" fill="white" />
+      Sorry, your browser does not support inline SVG.
+    <text fill="#000000" font-size="18" font-family="Verdana"
+      x="30" y="60">Expense</text>
+  </svg></a>
+</div>
+
+<div style='background-color:green; width:445px ;height:50px;text-align:center;'>
+
+  <h5 style="color:white;font-size:25px"><a   style="color:green" ><i style="color:white;font-size:25px" class="fa fa-bars"></i></a>
+
+
+&nbsp;&nbsp;&nbsp;
+Balance
+          &nbsp;&nbsp;
+          <a [routerLink]="['/expenses']"  ><i style="color:white;font-size:25px" class="fa fa-bars"></i></a>
+</h5>
+        </div>

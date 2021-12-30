@@ -1,0 +1,53 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<form [formGroup]="checkoutform" (ngSubmit)="onSubmit(checkoutform.value)">
+
+<br>&nbsp;&nbsp;
+<div class="">
+  <label for="amount">Amount:</label><br>
+  <input  style="width:50%" formControlName="amount"  type="number" required placeholder="enter amount"> <br>
+
+</div><br>
+<div class="">
+  <label for="date">Date:</label><br>
+  <input type="date" formControlName="date" #itemDate required style="width:50%" placeholder="set datetime">
+
+</div>
+<br><div class="">
+  <label for="note">Note:</label><br>
+  <input  formControlName="note" style="width:50%"  type="text" #itemTitle required placeholder="Note"> <br>
+
+</div>
+<br>
+<button type="submit" style="font-size:24px">Category <i class="fa fa-pencil" style="color:white"></i></button>
+</form>
+
+
+<br>
+<div class="" [hidden]=bars>
+
+  <button (click)="set_category('salary')" style="font-size:24px;width:30%">salary <i class="fa fa-money" style="color:white"></i></button>&nbsp;
+  <button (click)="set_category('savings')" style='font-size:24px' >savings <img src="../assets/piggy.jfif" style="width:25px;height:25px" alt="moneyebag"></button>
+
+</div>
+
+
+<div class="" [hidden]=bars2>
+<a (click)="set_category('train ticket')"><img src="../assets/train.png" style="width:40px;height:40px" alt="moneyebag"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a (click)="set_category('bus ticket')"><img src="../assets/bus.png" style="width:40px;height:40px" alt="moneyebag"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a (click)="set_category('dress')"><img src="../assets/dress.png" style="width:40px;height:40px" alt="moneyebag"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a (click)="set_category('home rent')"><img src="../assets/home.png" style="width:40px;height:40px" alt="moneyebag"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a (click)="set_category('hotel bill')"><img src="../assets/hotel.jfif" style="width:40px;height:40px" alt="moneyebag"></a>
+<br><br>
+
+<a (click)="set_category('sports')"><img src="../assets/sports.png" style="width:40px;height:40px" alt="moneyebag"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a (click)="set_category('hospital')"><img src="../assets/thermometer.png" style="width:40px;height:40px" alt="moneyebag"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a (click)="set_category('vehicle')"><img src="../assets/vehicle.png" style="width:40px;height:40px" alt="moneyebag"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a (click)="set_category('wifi')"><img src="../assets/wifi.jfif" style="width:40px;height:40px" alt="moneyebag"></a>
+
+</div>
